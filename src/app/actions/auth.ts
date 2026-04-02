@@ -28,7 +28,8 @@ export async function signUp(formData: FormData) {
 }
 
 export async function signIn(formData: FormData) {
-  const supabase = await createClient()
+  const rememberMe = formData.get('remember') === 'on'
+  const supabase = await createClient(rememberMe)
 
   const email = formData.get('email') as string
   const password = formData.get('password') as string

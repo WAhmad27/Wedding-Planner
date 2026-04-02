@@ -59,6 +59,19 @@ export default function LoginPage() {
               />
             </div>
 
+            <div className="flex items-center gap-2">
+              <input
+                id="remember"
+                name="remember"
+                type="checkbox"
+                defaultChecked
+                className="h-4 w-4 rounded border-stone-300 text-rose-600 focus:ring-rose-500"
+              />
+              <label htmlFor="remember" className="text-sm text-stone-600 select-none">
+                Keep me logged in
+              </label>
+            </div>
+
             {error && (
               <p className="text-sm text-red-600 bg-red-50 px-3 py-2 rounded-lg">
                 {error}
